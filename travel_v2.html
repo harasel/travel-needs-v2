@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Needs | Premium Australian Travel & E-Commerce Essentials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES & THEME SETUP (Light Premium Aesthetic) --- */
+        :root {
+            --primary: #112D4E;       /* Deep Luxury Navy */
+            --accent: #D4AF37;        /* Premium Gold */
+            --accent-hover: #C5A028;  /* Deep Gold Hover */
+            --text-main: #222831;     /* Clean Charcoal Black */
+            --text-muted: #5C6370;    /* Sophisticated Muted Grey */
+            --bg-pure: #FFFFFF;       /* Pure White */
+            --bg-soft: #F8F9FA;       /* Soft Light Ivory/Grey Tint */
+            --bg-card: #FFFFFF;       /* Card Background */
+            --border-color: #E2E8F0;  /* Subtle Dividers */
+            --font-sans: 'Montserrat', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.06);
+            --shadow-lg: 0 20px 40px rgba(17,45,78,0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* --- RESET & GLOBAL STYLES --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-pure);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        a {
+            text-shadow: none;
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select {
+            font-family: inherit;
+            font-size: inherit;
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- UTILITIES --- */
+        .section-padding {
+            padding: 100px 0;
+        }
+        @media (max-width: 768px) {
+            .section-padding { padding: 60px 0; }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--primary);
+            border-radius: 50px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* --- HEADER & NAVIGATION (E-COMMERCE ENABLED) --- */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 8px 0;
+            letter-spacing: 0.05em;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 52px;
+            width: auto;
+            border-radius: 4px;
+        }
+
+        .logo-text {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-bar-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: var(--bg-soft);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 6px 16px;
+            width: 220px;
+            transition: var(--transition);
+        }
+
+        .search-bar-container:focus-within {
+            width: 260px;
+            border-color: var(--accent);
+            background: var(--bg-pure);
+            box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+        }
+
+        .search-input {
+            width: 100%;
+            background: transparent;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-btn {
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .icon-btn {
+            font-size: 1.2rem;
+            color: var(--primary);
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 6px;
+        }
+
+        .icon-btn:hover {
+            color: var(--accent);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--bg-pure);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F4F7FA 100%);
+            padding: 120px 0 100px 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 48%;
+            height: 100%;
+            background: linear-gradient(90deg, #f9fafc 0%, rgba(255,255,255,0) 100%), 
+                        url('https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+            background-size: cover;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 3.8rem;
+            color: var(--primary);
+            line-height: 1.15;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: var(--accent);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 400;
+            max-width: 580px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            letter-spacing: 0.02em;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #0b1f36;
+            border-color: #0b1f36;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--primary);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn i {
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        .hero-image-showcase {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .hero-img-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--bg-pure);
+            transition: var(--transition);
+        }
+
+        .hero-img-card:hover {
+            transform: scale(1.03);
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .hero-img-card.tall {
+            grid-row: span 2;
+        }
+
+        .hero-img-card.tall img {
+            height: 496px;
+        }
+
+        .trust-strip {
+            display: flex;
+            gap: 32px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .trust-text h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .trust-text p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* --- TRAVEL CATEGORIES SECTION --- */
+        .categories-section {
+            background-color: var(--bg-soft);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .category-card {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .category-img-wrapper {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .category-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .category-card:hover .category-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .category-icon-badge {
+            position: absolute;
+            bottom: 224px;
+            right: 24px;
+            width: 54px;
+            height: 54px;
+            background-color: var(--primary);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--bg-card);
+            z-index: 2;
+        }
+
+        .category-body {
+            padding: 40px 24px 28px 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .category-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .category-link {
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .category-link i {
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-link {
+            color: var(--accent);
+        }
+
+        .category-card:hover .category-link i {
+            transform: translateX(4px);
+        }
+
+        /* --- WHY CHOOSE US SECTION --- */
+        .why-section {
+            background-color: var(--bg-pure);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-image-panel {
+            position: relative;
+        }
+
+        .why-main-img {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-experience-badge {
+            position: absolute;
+            bottom: -24px;
+            left: -24px;
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            border-left: 5px solid var(--accent);
+            max-width: 200px;
+        }
+
+        .why-experience-badge .num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .why-experience-badge .txt {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .why-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-item {
+            padding: 24px;
+            background-color: var(--bg-soft);
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-item:hover {
+            background-color: var(--bg-pure);
+            border-color: var(--border-color);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            background-color: rgba(17, 45, 78, 0.06);
+            color: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            transition: var(--transition);
+        }
+
+        .feature-item:hover .feature-icon {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .feature-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* --- E-COMMERCE FEATURED PRODUCTS SECTION --- */
+        .products-section {
+            background-color: var(--bg-soft);
+        }
+
+        .products-filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .filter-tab {
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 30px;
+            background-color: var(--bg-card);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-tab:hover, .filter-tab.active {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            border-color: var(--primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: var(--primary);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
+        .product-badge.sale {
+            background-color: #E53E3E;
+            color: white;
+        }
+
+        .product-wishlist {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 34px;
+            height: 34px;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .product-wishlist:hover {
+            color: #E53E3E;
+            background-color: white;
+        }
+
+        .product-img-holder {
+            height: 250px;
+            overflow: hidden;
+            background-color: #fcfcfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .product-img-holder img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img-holder img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-category {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+        }
+
+        .product-title {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 40px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.8rem;
+            color: #FFB020;
+            margin-bottom: 14px;
+        }
+
+        .product-rating span {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-left: 4px;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--bg-soft);
+        }
+
+        .product-price {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-current {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .price-old {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+
+        .add-to-cart-btn {
+            width: 38px;
+            height: 38px;
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        /* --- LIFESTYLE SECTION --- */
+        .lifestyle-section {
+            background-color: var(--bg-pure);
+            position: relative;
+        }
+
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .lifestyle-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 380px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .lifestyle-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .lifestyle-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(17,45,78,0.85) 0%, rgba(17,45,78,0.2) 60%, transparent 100%);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+
+        .lifestyle-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .lifestyle-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+
+        .lifestyle-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--bg-pure);
+            line-height: 1.3;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials-section {
+            background-color: var(--bg-soft);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-card);
+            padding: 40px 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 30px;
+            right: 32px;
+            font-size: 2.5rem;
+            color: rgba(212, 175, 55, 0.15);
+            font-family: serif;
+        }
+
+        .stars {
+            color: #FFB020;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-feedback {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .client-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+        }
+
+        .client-name {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .client-location {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* --- FINAL CTA SECTION --- */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #0B1F36 100%);
+            color: var(--bg-pure);
+            text-align: center;
+            padding: 90px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+            background-size: cover;
+            opacity: 0.08;
+        }
+
+        .cta-box {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--bg-pure);
+        }
+
+        .cta-title span {
+            color: var(--accent);
+        }
+
+        .cta-desc {
+            font-size: 1.1rem;
+            color: #E2E8F0;
+            margin-bottom: 36px;
+            font-weight: 300;
+        }
+
+        .cta-form {
+            display: flex;
+            max-width: 520px;
+            margin: 0 auto 24px auto;
+            background-color: var(--bg-pure);
+            padding: 6px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-input {
+            flex-grow: 1;
+            padding: 0 24px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            background: transparent;
+        }
+
+        .cta-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .cta-submit-btn {
+            background-color: var(--primary);
+            color: var(--bg-pure);
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cta-submit-btn:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0B1622;
+            color: #94A3B8;
+            padding: 70px 0 30px 0;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-title {
+            color: var(--bg-pure);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 4px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--bg-pure);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info-list i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.82rem;
+        }
+
+        /* --- RESPONSIVENESS --- */
+        @media (max-width: 1100px) {
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .lifestyle-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-title { font-size: 3rem; }
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-image-showcase { display: none; }
+            .categories-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .menu-toggle { display: block; }
+            .search-bar-container { display: none; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .cta-form { flex-direction: column; border-radius: 12px; padding: 12px; gap: 12px; }
+            .cta-submit-btn { width: 100%; }
+        }
+
+        /* Toast notification setup */
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid var(--accent);
+            transform: translateY(150%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .toast-notification.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <i class="fa-solid fa-truck-fast"></i> FREE PREMIUM SHIPPING ACROSS AUSTRALIA FOR ORDERS OVER $99!
+    </div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo-area">
+                <img src="https://i.ibb.co.com/5XjHWQMq/IMG-9975.jpg" alt="Travel Needs Logo" class="logo-img">
+                <div class="logo-text">
+                    TRAVEL NEEDS
+                    <span>AUSTRALIA</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#why-choose-us" class="nav-link">Why Us</a>
+                <a href="#shop" class="nav-link">Shop Essentials</a>
+                <a href="#lifestyle" class="nav-link">Adventures</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-bar-container">
+                    <input type="text" placeholder="Search travel gear..." class="search-input" id="productSearch">
+                    <button class="search-btn" aria-label="Search Submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <a href="#login" class="icon-btn" title="Customer Account Login" id="loginBtn">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+                <div class="icon-btn" title="Shopping Cart" id="cartBtn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartCountElement">0</span>
+                </div>
+
+                <div class="menu-toggle" id="mobileMenuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">Smarter. Safer. Better.</span>
+                <h1 class="hero-title">Elevate Your Journey With Premium <span>Travel Needs</span></h1>
+                <p class="hero-subtitle">Discover high-end, field-tested travel gear carefully engineered for the modern Australian nomad. Whether boarding a luxury cruise, embarking on an outback caravan tour, or catching a long-haul flight, we make travel seamlessly simple.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#shop" class="btn btn-primary">Explore Travel Store <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#categories" class="btn btn-accent">View Travel Formats</a>
+                </div>
+
+                <div class="trust-strip">
+                    <div class="trust-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div class="trust-text">
+                            <h4>Aussie Owned</h4>
+                            <p>Designed for local conditions</p>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fa-solid fa-star"></i>
+                        <div class="trust-text">
+                            <h4>4.9/5 Rating</h4>
+                            <p>Trusted by over 12,000+ travelers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-showcase">
+                <div class="hero-img-card tall">
+                    <img src="https://images.unsplash.com/photo-1719150809465-824b465a64d7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Luxury Caravan Trip Australia">
+                </div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Premium Jet flight travel">
+                </div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?auto=format&fit=crop&w=600&q=80" alt="Cruise Liner Ocean Travel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section section-padding" id="categories">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Engineered For Your Travel Style</h2>
+                <p class="section-subtitle">No matter how you choose to explore the globe or the vast Australian outback, we have tailor-made organizers and equipment built for you.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon-badge"><i class="fa-solid fa-ship"></i></div>
+                    <div class="category-img-wrapper">
+                        <img src="cruise_travel.jpg" alt="Cruise Travel Style">
+                    </div>
+                    <div class="category-body">
+                        <h3 class="category-title">Cruise Travel</h3>
+                        <p class="category-desc">Maximize your cabin space with heavy-duty magnetic hooks, waterproof document organizers, and cruise-approved compliance power blocks.</p>
+                        <a href="#shop" class="category-link">Shop Cruise Needs <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon-badge"><i class="fa-solid fa-plane"></i></div>
+                    <div class="category-img-wrapper">
+                        
+                        <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=600&q=80" alt="Air Travel Style">                        
+                    </div>
+                    <div class="category-body">
+                        <h3 class="category-title">Air Travel</h3>
+                        <p class="category-desc">Fly stress-free with TSA-approved security bottles, ultra-light packing cubes, RFID passport shields, and premium memory foam flight neck support.</p>
+                        <a href="#shop" class="category-link">Shop Aviation Needs <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon-badge"><i class="fa-solid fa-caravan"></i></div>
+                    <div class="category-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1597327190279-43b91807c7a5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Caravan and Road Trips">                        
+                    </div>
+                    <div class="category-body">
+                        <h3 class="category-title">Caravan & Motorhome</h3>
+                        <p class="category-desc">Specially curated compact kitchenware, rattling-prevention storage nets, high-durability external utility hooks, and off-grid gear.</p>
+                        <a href="#shop" class="category-link">Shop Roadtrip Needs <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section section-padding" id="why-choose-us">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-image-panel">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Premium Australian road trip adventure" class="why-main-img">
+                    <div class="why-experience-badge">
+                        <div class="num">100%</div>
+                        <div class="txt">Aussie Tested and Approved Quality Standards</div>
+                    </div>
+                </div>
+
+                <div class="why-content-panel">
+                    <span class="badge">The Premium Difference</span>
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Smart Design Met With Practical Luxury</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 24px;">At Travel Needs, we don't believe in generic templates or low-grade plastics. Every single product in our curated collection is rigorously tested against harsh elements to bring you absolute peace of mind.</p>
+                    
+                    <div class="why-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h3 class="feature-title">Easy Travel Solutions</h3>
+                            <p class="feature-desc">Engineered precisely to solve compact packing problems and security checks seamlessly.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <h3 class="feature-title">Designed For Aussies</h3>
+                            <p class="feature-desc">Perfectly aligned with local Caravan dimensions, domestic flights, and cruise operators.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                            <h3 class="feature-title">Premium Quality</h3>
+                            <p class="feature-desc">Crafted from medical-grade silicone, rustproof structural alloys, and ballistic fabrics.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-heart-circle-check"></i></div>
+                            <h3 class="feature-title">Stress-Free Living</h3>
+                            <p class="feature-desc">Spend less time checking bags or hunting for small gear and more time living your dream vacation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section section-padding" id="shop">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Premium Travel Store Essentials</h2>
+                <p class="section-subtitle">Directly derived from our official inventory. Elevate your comfort levels with these highly demanded, customer-favorite products.</p>
+            </div>
+
+            <div class="products-filter-tabs">
+                <button class="filter-tab active" onclick="filterProducts('all')">All Essentials</button>
+                <button class="filter-tab" onclick="filterProducts('magnetic')">Magnetic Hooks</button>
+                <button class="filter-tab" onclick="filterProducts('bottles')">Travel Bottles</button>
+                <button class="filter-tab" onclick="filterProducts('accessories')">Comfort & Security</button>
+            </div>
+
+            <div class="products-grid" id="productsDisplayContainer">
+                
+                <div class="product-card" data-category="magnetic">
+                    <span class="product-badge sale">Best Seller</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/pjycpVcD/IMG-7431.jpg" alt="Heavy Duty Swivel Magnetic Cruise Hook Pack">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cruise & Caravan</span>
+                        <h3 class="product-title">Ultra-Strong Neodymium Swivel Magnetic Cruise Hooks (Pack of 10)</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(142)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$34.95</span>
+                                <span class="price-old">$49.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Swivel Magnetic Cruise Hooks')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bottles">
+                    <span class="product-badge">New Release</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/rKqS5JDC/IMG-7809.jpg" alt="Premium Leakproof Travel Cosmetic Container Set">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Air Travel</span>
+                        <h3 class="product-title">Leakproof Silicone Travel Bottles & TSA Luxury Cosmetic Container Set</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(98)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$29.99</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Silicone Travel Bottles Set')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/G3xNZBBW/IMG-0027.jpg" alt="Premium Orthopedic Memory Foam Travel Neck Pillow">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Air Travel</span>
+                        <h3 class="product-title">Luxury Contour Memory Foam Neck Support Flight Travel Pillow</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(210)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$45.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Memory Foam Travel Pillow')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="magnetic">
+                    <span class="product-badge sale">Save 15%</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/fds6DwXv/IMG-8699.jpg" alt="Caravan Extra Large Magnetic Utility Clips">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Caravan & Camper</span>
+                        <h3 class="product-title">Heavy-Duty Magnetic Spring Utility Clips for Motorhome Awnings</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(64)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$24.50</span>
+                                <span class="price-old">$29.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Magnetic Spring Utility Clips')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bottles">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/Y70jWJ5q/IMG-8698.jpg" alt="Toiletry To Go Squeeze Tubes">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Essentials</span>
+                        <h3 class="product-title">Toiletry-To-Go Soft Squeeze Travel Tubes (4-Piece Eco Set)</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-stroke"></i>
+                            <span>(41)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$19.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Toiletry-To-Go Soft Tubes')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <span class="product-badge">Hot</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/jZgwXyhs/IMG-8765.jpg" alt="RFID Protected Premium Travel Passport Wallet Organizer">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Security</span>
+                        <h3 class="product-title">RFID Multi-Passport Shielded Premium Secure Travel Wallet</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(119)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$39.99</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('RFID Multi-Passport Wallet')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="magnetic">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/WpB1Q8Vy/IMG-8898.jpg" alt="Cruise Metal Stateroom Wall Hanging Magnet Anchors">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cruise Premium</span>
+                        <h3 class="product-title">Cruise Ship Cabin Stateroom Decorative Wall Magnet Anchors</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(53)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$27.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Stateroom Wall Magnet Anchors')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <span class="product-badge sale">Promo Price</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/GfdKDc94/IMG-9367.jpg" alt="Premium Anti-Slip Caravan Clothesline and Clamps">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Caravan & Camping</span>
+                        <h3 class="product-title">Elasticated Anti-Slip Windproof Caravan Awning Clothesline Set</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$16.80</span>
+                                <span class="price-old">$22.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Caravan Awning Clothesline Set')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="bottles">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/s9vM59yb/IMG-9110.jpg" alt="Clear Airport Security Toiletry Organizer Pouch">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Air Travel</span>
+                        <h3 class="product-title">TSA Airport Security Approved Clear Heavy-Duty Toiletry Pouch</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(177)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$14.99</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('TSA Approved Clear Pouch')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/BHb5740D/IMG-0085.jpg" alt="Digital High Accuracy Luggage Scale">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Aviation</span>
+                        <h3 class="product-title">Precision Backlit Electronic Digital Luggage Weight Scale</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(230)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$24.99</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Precision Luggage Scale')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <span class="product-badge">Top Pick</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/qFXwc7dB/IMG-0121.jpg" alt="Universal World Travel Power Adapter">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Electronics</span>
+                        <h3 class="product-title">All-In-One High-Speed Smart Universal International Power Adapter</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(342)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$49.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Universal International Power Adapter')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/YTLVsJbK/IMG-8632.jpg" alt="Ultra Compression Travel Packing Cubes">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Organization</span>
+                        <h3 class="product-title">Ripstop Nylon Compression Packing Cubes for Compact Travel</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(185)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$38.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Compression Packing Cubes')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <span class="product-badge sale">Clearance</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/5hyVBH7b/IMG-8634.png" alt="Travel Hanging Cosmetic Toiletry Bag">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Organization</span>
+                        <h3 class="product-title">Luxury Multi-Tier Hanging Bathroom Organizer Travel Toiletry Case</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                            <span>(92)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$31.50</span>
+                                <span class="price-old">$45.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Hanging Toiletry Case')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/jvZX2CNs/IMG-7640.jpg" alt="Heavy Duty TSA Cable Combination Locks">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Security</span>
+                        <h3 class="product-title">TSA Approved Heavy Duty Flexible Steel Cable Luggage Combination Lock</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(412)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$18.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('TSA Luggage Combination Lock')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/gFQRw11C/IMG-8631.jpg" alt="Premium Ergonomic Sleep Mask and Earplug Set">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Comfort</span>
+                        <h3 class="product-title">3D Contoured Pure Blackout Sleep Mask with Sound Insulating Earplugs</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(206)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$22.00</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('3D Contoured Sleep Mask Set')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="magnetic">
+                    <span class="product-badge">Heavy Duty</span>
+                    <div class="product-wishlist"><i class="fa-regular fa-heart"></i></div>
+                    <div class="product-img-holder">
+                        <img src="https://i.ibb.co.com/pjycpVcD/IMG-7431.jpg" alt="Industrial Grade Caravan Exterior Magnets">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Caravan Premium</span>
+                        <h3 class="product-title">Industrial Counter-Sunk Rare Earth Mounting Magnets (12-Pack)</h3>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(74)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                <span class="price-current">$39.95</span>
+                            </div>
+                            <div class="add-to-cart-btn" onclick="addToCart('Mounting Magnets 12-Pack')"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="lifestyle-section section-padding" id="lifestyle">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">Moments Built From Freedom</h2>
+                <p class="section-subtitle">Real experiences captured by our community of passionate travelers utilizing Travel Needs premium organizational toolkits across diverse continents.</p>
+            </div>
+
+            <div class="lifestyle-grid">
+                <div class="lifestyle-item">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?auto=format&fit=crop&w=500&q=80" alt="Australian Roadtrips Caravan Lifestyle">
+                    <div class="lifestyle-overlay">
+                        <span class="lifestyle-tag">Outback Roaming</span>
+                        <h4 class="lifestyle-text">Exploring the rugged Red Center with total structure.</h4>
+                    </div>
+                </div>
+
+                <div class="lifestyle-item">
+                    <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=500&q=80" alt="Ocean Cruise Deck Luxury Life">
+                    <div class="lifestyle-overlay">
+                        <span class="lifestyle-tag">Cruise Living</span>
+                        <h4 class="lifestyle-text">Elegant stateroom organization over deep blue oceans.</h4>
+                    </div>
+                </div>
+
+                <div class="lifestyle-item">
+                    <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=500&q=80" alt="High Altitude Aviation Passenger View">
+                    <div class="lifestyle-overlay">
+                        <span class="lifestyle-tag">International Flights</span>
+                        <h4 class="lifestyle-text">Arriving deeply rested, organized, and ahead of time.</h4>
+                    </div>
+                </div>
+
+                <div class="lifestyle-item">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=500&q=80" alt="Relaxing Travel Sunset Exploration">
+                    <div class="lifestyle-overlay">
+                        <span class="lifestyle-tag">Premium Leisure</span>
+                        <h4 class="lifestyle-text">Enjoying distraction-free exploration moments.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">What Fellow Nomads Say</h2>
+                <p class="section-subtitle">Read unfiltered five-star feedback directly verified from our continuous community of verified premium Australian buyers.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-feedback">"I bought the Neodymium Swivel Magnetic Hooks for our 14-day cruise around New Zealand. The cabin walls are all metallic and these hooks essentially doubled our closet capacity! Absolutely incredible quality."</p>
+                    <div class="client-profile">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Sarah Jenkins</h4>
+                            <span class="client-location">Brisbane, QLD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-feedback">"The silicone travel container set is beautifully leakproof. We've done three heavy domestic flights from Sydney to Perth and everything stayed perfectly clean in the TSA pouch. High quality products."</p>
+                    <div class="client-profile">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Marcus Thompson" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Marcus Thompson</h4>
+                            <span class="client-location">Sydney, NSW</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <span class="quote-icon">“</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-feedback">"Structuring our caravan space means setup optimization is key. The elastic clothesline set and magnetic spring utility clips are absolute game-changers for holding awnings stable during high winds."</p>
+                    <div class="client-profile">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Elena Rostova" class="client-avatar">
+                        <div>
+                            <h4 class="client-name">Elena Rostova</h4>
+                            <span class="client-location">Melbourne, VIC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container cta-box">
+            <h2 class="cta-title">Ready For Your Next <span>Unforgettable Adventure?</span></h2>
+            <p class="cta-desc">Join our premium Australian travel club mailing list. Receive a 15% discount code instantly applied to your first e-commerce check-out plus exclusive early access product releases.</p>
+            
+            <form class="cta-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your 15% discount code has been sent to your email.');">
+                <input type="email" placeholder="Enter your email address..." class="cta-input" required>
+                <button type="submit" class="cta-submit-btn">Get 15% Off Now</button>
+            </form>
+            
+            <p style="font-size: 0.8rem; color: #A0AEC0;">We respect your privacy. Unsubscribe anytime with one clear click.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo-area" style="margin-bottom: 20px;">
+                    <img src="https://i.ibb.co.com/5XjHWQMq/IMG-9975.jpg" alt="Travel Needs Footer Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span style="color:white; font-size:1.1rem; letter-spacing:0px; font-weight:800;">TRAVEL NEEDS</span>
+                        <span>AUSTRALIA</span>
+                    </div>
+                </div>
+                <p>Premium travel equipment, accessories, and organizers engineered specifically for demanding Australian road trip caravans, cruise ship cabins, and transcontinental aviation comfort.</p>
+                <div class="social-icons">
+                    <a href="#facebook" class="social-icon" aria-label="Facebook Link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#instagram" class="social-icon" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#youtube" class="social-icon" aria-label="Youtube Link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#pinterest" class="social-icon" aria-label="Pinterest Link"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Explore Store</h4>
+                <ul class="footer-links">
+                    <li><a href="#shop">All E-Commerce Essentials</a></li>
+                    <li><a href="#shop">Magnetic Hooks Pack</a></li>
+                    <li><a href="#shop">Leakproof Bottles</a></li>
+                    <li><a href="#shop">Luggage Scales</a></li>
+                    <li><a href="#shop">Travel Neck Pillows</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Support & Trust</h4>
+                <ul class="footer-links">
+                    <li><a href="#shipping">Track Your Order</a></li>
+                    <li><a href="#returns">Refund & Returns Policy</a></li>
+                    <li><a href="#privacy">Privacy Protection</a></li>
+                    <li><a href="#terms">Terms of Luxury Service</a></li>
+                    <li><a href="#faq">Frequently Asked FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Contact Travel Needs</h4>
+                <ul class="contact-info-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Melbourne Logistics Center, Victoria, Australia</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>support@travelneeds.com.au</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>1300 TRAVEL AU (1300 872 835)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Travel Needs Australia (travelneeds.com.au). All Rights Reserved. Crafted for Premium Performance.</p>
+            <p>Payment Methods Securely Accepted: <i class="fa-brands fa-cc-visa" style="font-size:1.4rem; margin-left:6px; color:white;"></i> <i class="fa-brands fa-cc-mastercard" style="font-size:1.4rem; margin-left:6px; color:white;"></i> <i class="fa-brands fa-cc-apple-pay" style="font-size:1.4rem; margin-left:6px; color:white;"></i></p>
+        </div>
+    </footer>
+
+    <div class="toast-notification" id="cartToastNotification">
+        <i class="fa-solid fa-circle-check" style="color: var(--accent); font-size: 1.3rem;"></i>
+        <div>
+            <strong id="toastProductName">Item</strong> added to your e-commerce cart successfully!
+        </div>
+    </div>
+
+    <script>
+        let itemsInCartCount = 0;
+        const cartCountElement = document.getElementById('cartCountElement');
+        const cartToastNotification = document.getElementById('cartToastNotification');
+        const toastProductName = document.getElementById('toastProductName');
+
+        function addToCart(productName) {
+            itemsInCartCount++;
+            cartCountElement.innerText = itemsInCartCount;
+            toastProductName.innerText = productName;
+            cartToastNotification.classList.add('show');
+            setTimeout(() => {
+                cartToastNotification.classList.remove('show');
+            }, 3000);
+        }
+
+        function filterProducts(category) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                if(category === 'all') {
+                    card.style.display = 'flex';
+                } else {
+                    if(card.getAttribute('data-category') === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        const searchInput = document.getElementById('productSearch');
+        searchInput.addEventListener('keyup', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+            
+            productCards.forEach(card => {
+                const titleText = card.querySelector('.product-title').innerText.toLowerCase();
+                const categoryText = card.querySelector('.product-category').innerText.toLowerCase();
+                
+                if(titleText.includes(searchTerm) || categoryText.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('loginBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = prompt("Enter your registered Travel Needs Premium account email:");
+            if(email) {
+                alert("Welcome back user (" + email + ")! Accessing your custom e-commerce dashboard securely.");
+            }
+        });
+
+        document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            if(navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '80px';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.backgroundColor = 'white';
+                navMenu.style.padding = '20px';
+                navMenu.style.borderBottom = '1px solid #E2E8F0';
+                navMenu.style.gap = '16px';
+                navMenu.style.zIndex = '999';
+            }
+        });
+    </script>
+</body>
+</html>
